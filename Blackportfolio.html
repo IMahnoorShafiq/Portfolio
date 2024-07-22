@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <title>Portfolio</title>
+    <style>
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateX(-20px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s forwards;
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 1s forwards;
+        }
+
+        .animate-slideIn {
+            animation: slideIn 1s forwards;
+        }
+
+        #menu-toggle:checked + #menu {
+            transform: translateY(0);
+        }
+
+        #menu {
+            transform: translateY(-100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <nav class="bg-black text-white p-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <h1 class="font-semibold font-serif text-base text-[#e3dd36]"> M.</h1>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="hidden">
+            <label for="menu-toggle" class="md:hidden text-white cursor-pointer">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <!--Scalable Vector Graphics-->  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </label>
+            <div class="hidden md:flex space-x-4">
+                <a href="#" class="hover:underline hover:text-[#e3dd36]">Resume</a>
+                <li>|</li>
+                <a href="#" class="hover:underline hover:text-[#e3dd36]">Projects</a>
+                <li>|</li>
+                <a href="#" class="hover:underline hover:text-[#e3dd36]">Languages</a>
+                <li>|</li>
+                <a href="#" class="hover:underline hover:text-[#e3dd36]">Contact</a>
+            </div>
+        </div>
+        <div class="md:hidden absolute top-full left-0 right-0 bg-black text-white transition-transform duration-300 ease-in-out" id="menu">
+            <label for="menu-toggle" class="absolute top-0 right-0 p-4 cursor-pointer">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+            <a href="#" class="block px-4 py-2 hover:underline">Resume</a>
+            <li>|</li>
+            <a href="#" class="block px-4 py-2 hover:underline">Projects</a>
+            <li>|</li>
+            <a href="#" class="block px-4 py-2 hover:underline">Languages</a>
+            <li>|</li>
+            <a href="#" class="block px-4 py-2 hover:underline">Contact</a>
+        </div>
+    </nav>
+
+    <div class="relative flex items-center justify-center min-h-screen bg-cover bg-center " style="background-image: url('./bg.jpg');">
+        <div class="absolute z-10 p-6 shadow-lg mt-4 rounded-lg justify-left text-left bg-black bg-opacity-40 animate-fadeIn">
+            <h3 class="text-3xl font-serif mb-4 mt-2 text-white">Hello,</h3>
+            <p class="text-white mb-6 font-semibold text-[40px]">I'm <span class="text-[#e3dd36]">Mahnoor</span><br>
+                Front-End Developer</p><br>
+                <p class="mt=0 mb-6 text-[20px]">I am skilled and passion for creating visually stunning and highly responsive websites. I build engaging user experiences that are both functional and aesthetically pleasing.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="bg-[#e3dd36] font-bold text-black-800 px-4 py-2 rounded-full justify-center hover:bg-white hover:text-black transition duration-300"><i class="fas fa-briefcase p-2"></i>Hire Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center bg-black py-8">
+        <h1 class="text-4xl font-bold  py-6  bg-[#e3dd36]">What I do </h1>
+    </div>
+    <div class="bg-black min-h-screen flex items-center justify-center">
+        <div class="max-w-5xl mx-auto py-4 px-4 sm:px-6 lg:px-8 bg-black ">
+            
+            <p class="text-center text-white mb-12 font-2xl animate-fadeIn ">I am  front end designer with experience in creating visually appealing and user-friendly websites. I have a strong understanding of design and a keen eye for detail. I am proficient in HTML, CSS, and JavaScript.</p>
+            <div class="space-y-6">
+                <div class="bg-gray-800 p-6 rounded-lg flex items-start space-x-4 animate-fadeInUp">
+                    <img src="web.png" alt="Web Development" class="h-12 w-12">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-white">Web Development</h3>
+                        <p class="text-white">I have always been interested in web development, and I have the necessary skills required for the role. I have a good understanding of HTML, CSS, Tailwind CSS and JavaScript. I am currently improving my mobile app development skills by learning various new technologies.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg flex items-start space-x-4 animate-fadeInUp">
+                    <img src="app.png" alt="Application Development" class="h-12 w-12">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-white">Application Development</h3>
+                        <p class="text-white">My expertise lies in both Android and iOS platforms, ensuring cross-platform functionality. I excel in languages like Javascript and React Native, combining technical skills with creative problem-solving. I thrive in collaborative environments, always eager to learn and adopt new technologies to stay ahead in the fast-paced app development industry.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg flex items-start space-x-4 animate-fadeInUp">
+                    <img src="proj.png" alt="Project Management" class="h-12 w-12">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-white">Project Management</h3>
+                        <p class="text-white">My strong organizational skills and strategic planning abilities ensure efficient project execution and successful outcomes. With a focus on effective communication and stakeholder management, I drive team collaboration and client satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center bg-black py-10">
+        <h1 class="text-4xl font-bold  py-6  bg-[#e3dd36]">My Projects</h1>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-6 px-10 xl:px-0 py-20 justify-items-center bg-black">
+        <a href="https://www.yankeecandle.com/">
+            <div class=" p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                <div class="py-2">
+                    <img src="./candle.jpeg" alt="Candle Website" class="mx-auto rounded-lg w-64 h-64">
+                </div>
+                <h2 class="text-base text-center text-[#e3dd36]">Scented Candles</h2>
+                <p class="text-white text-center text-base">Project # 1</p>
+            </div>
+        </a>
+        <a href="https://www.thebodyshop.pk/">
+            <div class=" p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                <div class="py-2">
+                    <img src="./body.jpeg" alt="Body Shop" class="mx-auto rounded-lg w-64 h-64">
+                </div>
+                <h2 class="text-base text-center text-[#e3dd36]">Skin Care </h2>
+                <p class="text-white text-center text-base">Project # 2</p>
+            </div>
+        </a>
+        <a href="https://www.navyhaircare.com/">
+            <div class=" p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                <div class="py-2">
+                    <img src="./hair.jpg" alt="Hair Products" class="mx-auto rounded-lg  w-64 h-64">
+                </div>
+                <h2 class="text-base text-center text-[#e3dd36]">Hair Care Products</h2>
+                <p class="text-white text-center text-base">Project #3</p>
+            </div>
+        </a>
+    </div>
+    <div class="flex justify-center  items-center bg-[#e3dd36] py-6">
+        <div class="flex space-x-6 ">
+            <img src="html-.png" alt="HTML"  class="w-8 h-8 md:w-10 md:h-10 ">
+            <img src="css.png" alt="CSS" class="w-8 h-8 md:w-10 md:h-10">
+            <img src="java.png" alt="JavaScript" class="w-8 h-8 md:w-10 md:h-10">
+            <img src="react.png" alt="React" class="w-8 h-8 md:w-10 md:h-10">
+            <img src="sql.png" alt="SQL" class="w-8 h-8 md:w-10 md:h-10">
+            <img src="git.png" alt="Git" class="w-8 h-8 md:w-10 md:h-10 ">
+            <img src="canva.png" alt="Canva" class="w-8 h-8 md:w-10 md:h-10">
+        </div>
+    </div>
+
+    <div class="py-20 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h2 class="text-2xl font-bold mb-4">Contact</h2>
+                    <p class="mb-8">Feel free to reach out to me for any project or collaboration opportunities.</p>
+                    <form action="#" method="post">
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-[#e3dd36]" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-[#e3dd36]" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full p-2 border border-gray-300 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-[#e3dd36]" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-[#e3dd36] text-black px-4 py-2 rounded-full hover:bg-white hover:text-black transition duration-300">Send</button>
+                    </form>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold mb-4">Social Media</h2>
+                    <p class="mb-8">You can also find me on the following platforms:</p>
+                    <div class="space-y-4">
+                        <a href="#" class="flex items-center space-x-4">
+                            <i class="fab fa-linkedin text-2xl text-[#e3dd36]"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-4">
+                            <i class="fab fa-github text-2xl text-[#e3dd36]"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-4">
+                            <i class="fab fa-twitter text-2xl text-[#e3dd36]"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-4">
+                            <i class="fab fa-instagram text-2xl text-[#e3dd36]"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-4">
+                            <i class="fab fa-facebook-f text-2xl text-[#e3dd36]"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-black text-white text-center py-6">
+        <p> &copy; 2024 Mahnoor. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+</body>
+</html>
